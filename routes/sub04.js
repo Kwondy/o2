@@ -4,7 +4,7 @@ var boardA = require('../models/board1');
 var boardB = require('../models/board2');
 var boardC = require('../models/board3');
 var boardD = require('../models/board4');
-var boardAs = require('../models/boardAs');
+var boardAs = require('../models/boardas');
 
 router.get('/sub04_01_01', function(req,res){
      // 처음 index로 접속 했을시 나오는 부분
@@ -571,19 +571,31 @@ router.get('/sub04_03_01', function(req, res, next) {
 });
 
 
-router.post('/sub04_03_01', function(req, res){
-    // 글 작성하고 submit하게 되면 저장이 되는 부분
-    var addNewTitle = req.body.addContentSubject;
-    var addNewWriter = req.body.addContentWriter;
-    var addNewContent = req.body.addContents;
-    var addNewPasword = req.body.addContentPassword;
-    var addNewTel1 = req.body.addContentTel1;
-    var addNewTel2 = req.body.addContentTel2;
-    var addNewTel3 = req.body.addContentTel3;
+// router.post('/sub04_03_01', function(req, res){
+//     // 글 작성하고 submit하게 되면 저장이 되는 부분
+//     var addNewTitle = req.body.addContentSubject;
+//     var addNewWriter = req.body.addContentWriter;
+//     var addNewContent = req.body.addContents;
+//     var addNewPasword = req.body.addContentPassword;
+//     var addNewTel1 = req.body.addContentTel1;
+//     var addNewTel2 = req.body.addContentTel2;
+//     var addNewTel3 = req.body.addContentTel3;
 
-    addBoardAs(addNewTitle, addNewWriter, addNewContent, addNewPasword, addNewTel1, addNewTel2, addNewTel3);
-    res.redirect('/sub04/sub04_03_01');
+//     addBoardAs(addNewTitle, addNewWriter, addNewContent, addNewPasword, addNewTel1, addNewTel2, addNewTel3);
+//     res.redirect('/sub04/sub04_03_01');
+// });
+
+/* sub04_03_01 게시글 저장부분  */
+
+router.post('/sub04_03_01', function(req, res, next) {
+
+    boardAs.create(req.body, function (err, post) {
+        if(err) return res.json(err);
+        return res.redirect('/sub04/sub04_03_01');
+    });
+    // res.render('sub02_02_01', { title: '포장이사견적/신청' });
 });
+
 
 
 module.exports = router;

@@ -67,8 +67,7 @@
 					alert("개인정보취급방침에 동의하셔야 서비스이용 가능합니다.");
 					return;
 				}
-				document.formname.action = "/sub02/sub02_3_1_proc.asp";
-				document.formname.target = "iframe_proc";
+				document.formname.action = "/sub02/sub02_03_01";
 				document.formname.submit();
 			}
 			</script>
@@ -234,7 +233,7 @@
 						<div class="division-1" style="height:auto; padding-bottom:0; margin-bottom:20px; margin-top:0; padding-top:0;">
 								개인정보취급방침
 						</div>
-						<IFRAME name=ifrmsil src="/sub05/policy.asp" frameborder=1 style="border:1px solid #ccc;" width="900" height=200 vspace=0 hspace=0 framespacing=0></IFRAME>
+						<IFRAME name=ifrmsil src="/include/policy" frameborder=1 style="border:1px solid #ccc;" width="900" height=200 vspace=0 hspace=0 framespacing=0></IFRAME>
 						<p style="padding:20px 0; font-size:14px;">
 							<span style="font-weight:300; margin-right:10px;">개인정보취급방침에 동의하십니까?</span>
 							<input type="radio" name="chkinfo" value="1" style="vertical-align:middle;"> <span style="color:#999; padding-right:10px;">예</span>

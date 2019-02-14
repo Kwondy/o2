@@ -7,7 +7,7 @@ router.get('/sub03_01_01', function(req, res, next) {
 });
 
 router.get('/sub03_01_02', function(req, res, next) {
-    res.render('sub03_01_02', { title: '이사요금 지불' });
+    res.render('sub03_01_02', { title: '이사·화물 요금지불' });
 });
 
 router.get('/sub03_02_01', function(req, res, next) {
@@ -36,6 +36,10 @@ router.get('/sub03_02_06', function(req, res, next) {
 
 router.get('/sub03_02_07', function(req, res, next) {
     res.render('sub03_02_07', { title: '일정별 체크리스트' });
+});
+
+router.get('/sub03_02_07_print', function(req, res, next) {
+    res.render('sub03_02_07_print', { title: '일정별 체크리스트' });
 });
 
 module.exports = router;

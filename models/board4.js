@@ -1,3 +1,4 @@
+/* 기타 고객문의 */
 var mongoose = require('mongoose');
 var boardSchema = mongoose.Schema({
     writer: String,

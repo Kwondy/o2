@@ -7,11 +7,11 @@ router.get('/sub01_01_01', function(req, res, next) {
 });
 
 router.get('/sub01_01_02', function(req, res, next) {
-    res.render('sub01_01_02', { title: '이사품질관리' });
+    res.render('sub01_01_02', { title: '이사·화물품질정책' });
 });
 
 router.get('/sub01_01_03', function(req, res, next) {
-    res.render('sub01_01_03', { title: '차량소개' });
+    res.render('sub01_01_03', { title: '차량구비 시스템' });
 });
 
 router.get('/sub01_01_04', function(req, res, next) {
@@ -19,11 +19,11 @@ router.get('/sub01_01_04', function(req, res, next) {
 });
 
 router.get('/sub01_01_05', function(req, res, next) {
-    res.render('sub01_01_05', { title: '고객평가제도안내' });
+    res.render('sub01_01_05', { title: '서비스리콜 센터운영' });
 });
 
 router.get('/sub01_01_06', function(req, res, next) {
-    res.render('sub01_01_06', { title: '이사흐름도' });
+    res.render('sub01_01_06', { title: '이사·화물 진행절차' });
 });
 
 router.get('/sub01_02_01', function(req, res, next) {

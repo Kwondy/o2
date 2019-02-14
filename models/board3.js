@@ -1,3 +1,4 @@
+/* 현금영수증 문의 */
 var mongoose = require('mongoose');
 var boardSchema = mongoose.Schema({
     writer: String,

@@ -3,80 +3,129 @@
   <head>
     <title></title>
     <% include ./include/include.ejs %> 
-  
+	<link rel='stylesheet' href='/stylesheets/main.css' />
   </head>
-  <body class="sub sub-01">
+  <body class="main">
     <div id="wrap">
       <div id="header">
       <% include ./include/nav.ejs %> 
-      
-    
-	  <div id="content">
-        <!-- leftmenu start -->
-                    <div id="side-nav">
-
-            <h3 class="title">고객센터</h3>
-            <div class="nav-section">
-                <h4 class="on"><a href="/sub05/sub05_1_1.asp">고객문의</a></h4>
-                
-                <ul>
-                    <li class="on"><a href="/sub05/sub05_1_1.asp">계약여부 문의</a></li>
-                    <li ><a href="/sub05/sub05_1_2.asp">방문견적 변경/취소</a></li>
-                    <li ><a href="/sub05/sub05_1_3.asp">현금영수증 문의</a></li>
-                    <li ><a href="/sub05/sub05_1_4.asp">기타 고객문의</a></li>
-                </ul>
-                    
-            </div>
-            <div class="nav-section">
-                <h4 ><a href="/sub05/sub05_3_1.asp">A/S</a></h4>
-                    
-            </div>
-            <div class="nav-section">
-                <h4 ><a href="/sub05/sub05_4_1.asp">오투이사에 바란다</a></h4>
-            </div>
-
-        </div>
-		
-
-
-
-
-    
-
- 
-		
-		  <!-- leftmenu end -->			
-		  <div id="inner-wrap">
-				<p id="breadcrumb">
-					<a href="#none" class="home">HOME</a><a href="#none">이사서비스</a><a href="#none">오투이사 서비스소개</a><a href="#none">차량소개</a>
+	  </div>
+	
+	  
+	  <div class="main-banner">
+			<!--<div class="cycle-slideshow" data-cycle-fx="scrollHorz" data-cycle-pause-on-hover="true" data-cycle-speed="500">-->
+			<div class="cycle-slideshow">			
+				<img src="/images/main_banner_01.jpg" style="width:100%;"/>
+				<img src="/images/main_banner_02.jpg" style="width:100%;" />
+				<img src="/images/main_banner_03.jpg" style="width:100%;" />
+			</div>
+		<div class="floating-area">
+			<div id="contact-info">
+				<div id="ci_top">
+					<img src="/images/icon/main_ico_01.png" width="30" style="margin-top:5px;"/>고객상담전화 <span id="main_tel">1577-2404</span>
+				</div>
+				<div id="ci_bottom">
+					<img src="/images/icon/main_ico_02.png" width="26" height="26" style="margin-top:-3px;"/><span id="time">고객센터 운영시간 안내</span>
+				</div>
+				<p class="time">
+					평<span class="word-space"></span>일 : AM 08:00 ~ PM 19:00<br /> 토요일 : AM 09:00 ~ PM 18:00<br /> 공휴일 : AM 09:00 ~ PM 18:00
 				</p>
-				<div id="title-section">
-					<h1>1톤 탑차 또는 5톤 탑차, <br /><span class="fc-turquoise">작업조건에 따라 선택</span>이 용이합니다.</h1>
-					<p>도로 환경 및 작업 조건에 맞춰 원하시는 차량을 직접 선택하실 수 있기에 안전하고 합리적으로 서비스를 이용하실 수 있습니다.</p>
-				</div>
-				<div id="content-section">
-					<h3>작업조건에 따라 차량선택가능</h3>
-					<p>좁은 골목길, 장거리 등 작업조건이나 상황에 따라 고객이 직접 차량(팀)을 선택할 수 있어 효율적입니다.</p>
-					<h3>1톤차 3대는 안전하고 효율적</h3>
-					<p>1톤탑차 3대가 5톤 탑차 1대보다 적재공간이 적다고 우려할 수 있으나 1톤 탑차의 경우 5톤 탑차 1대분량과 동일한 적재가 가능합니다.</p>
-					<h3>모두가 차주입니다.</h3>
-					<p>이사 차량은 소사장 개인이 직접 소유하고 있는 차량으로 안전합니다.</p>
-					<div class="division-1">
-						차량 소개
+			</div>
+			<div class="form-area">
+				<div id="fa_left">
+					<div class="title"><span>온라인견적</span>신청</div>
+					<div class="desc">온라인 견적신청을 해주시면<br/>운영시간에 전화드리겠습니다.</div>
+					<form name="frm_easy" method="post">
+						<input type="hidden" name="in_gbn" id="in_gbn" value="main"/>					
+						<input type="hidden" name="movetype" id="movetype" value=""/>
+						<input type="hidden" name="s_postcode" id="s_postcode" value=""/>						
+						<input type="hidden" name="s_roadAddress" id="s_roadAddress" value=""/>
+						<input type="hidden" name="saddr1" id="saddr1" value=""/>
+						<input type="hidden" name="saddr2" id="saddr2" value=""/>
+						<input type="hidden" name="saddr3" id="saddr3" value=""/>
+						<input type="hidden" name="s_bcode" id="s_bcode" value=""/>																														
+						<input type="hidden" name="e_postcode" id="e_postcode" value=""/>
+						<input type="hidden" name="e_roadAddress" id="e_roadAddress" value=""/>
+						<input type="hidden" name="eaddr1" id="eaddr1" value=""/>
+						<input type="hidden" name="eaddr2" id="eaddr2" value=""/>
+						<input type="hidden" name="eaddr3" id="eaddr3" value=""/>
+						<input type="hidden" name="e_bcode" id="e_bcode" value=""/>	
+					<div class="regform">
+						<div class="tabs">
+							<div id="move1" class="movetab on" title="가정이사">가정이사</div>
+							<div id="move2" class="movetab" title="보관이사">보관이사</div>
+							<div id="move3" class="movetab" title="사무실이사">사무실이사</div>
+						</div>
+						<ul>
+							<li>
+								<input id="custname" name="custname" class="main_reg_text w170" type="text" placeholder="고객명">
+								<select id="hp1" name="hp1" class="main_reg_select w57">
+									<option value="010">010</option>
+									<option value="011">011</option>
+									<option value="017">017</option>
+									<option value="018">018</option>
+									<option value="019">019</option>
+									<option value="02">02</option>
+									<option value="031">031</option>	
+									<option value="032">032</option>	
+									<option value="033">033</option>	
+									<option value="041">041</option>	
+									<option value="042">042</option>	
+									<option value="043">043</option>	
+									<option value="044">044</option>	
+									<option value="051">051</option>	
+									<option value="052">052</option>	
+									<option value="053">053</option>	
+									<option value="054">054</option>	
+									<option value="055">055</option>	
+									<option value="061">061</option>	
+									<option value="062">062</option>	
+									<option value="063">063</option>	
+									<option value="064">064</option>
+								</select>
+								<input id="hp2" name="hp2" class="main_reg_text w53" type="text" maxlength="4">
+								<input id="hp3" name="hp3" class="main_reg_text w53" type="text" maxlength="4">																
+							</li>
+							<li>
+								<select title="짐양" id="amount" name="amount" class="main_reg_select w170 ">
+									<option value="">이삿짐 양</option>
+									<option value="-1">짐이적은편</option>
+									<option value="0">보통</option>
+									<option value="1">짐이많은편</option>
+								</select>
+								<input id="moveDate" name="movedate" class="main_reg_text w136" type="text" readonly placeholder="이사일">
+								<img src="/images/icon/main_ico_05.png" class="btn_movedate" style="margin-top:2px;cursor:pointer;"/>
+							</li>
+							<li>
+								<input id="saddr" name="saddr" class="main_reg_text w170" type="text" readonly placeholder="출발지" onclick="javascript:sAddress();">
+								<input id="eaddr" name="eaddr" class="main_reg_text w170" type="text" readonly placeholder="도착지" onclick="javascript:eAddress();">
+							</li>	
+							<li>
+								<p>개인정보취급방침 동의
+								<input type="radio" name="chkinfo" value="1" style="vertical-align:middle;margin-left:10px;"> <span style="padding-right:10px;">예</span>
+								<input type="radio" name="chkinfo" value="0" style="vertical-align:middle;"> <span>아니오</span>
+								</p>
+							</li>													
+						</ul>
+						<div class="btnsubmit"><img src="/images/btn_submit.png" onClick="javascript:send_it();"/></div>
 					</div>
-					<div class="column-6">
-						<p class="column-6 mg-0 ta-center"><img src="/images/size_of_truck.jpg" /></p>
-						<div class="fl column-2_5 ta-center">
-							<p class="fs-14 fc-333 fw-500">오투이사 1톤 탑차<br /><span class="fs-13 fc-777 fw-400">(장)3.11 x (폭)1.60 x (고)2.20 x 3대 = </span><span class="fc-orange fw-400">33CBM</span></p>
-						</div>
-						<div class="fl column-1">
-						</div>
-						<div class="fl column-2_5 ta-center">
-							<p class="fs-14 fc-333 fw-500">오투이사 5톤 탑차<br /><span class="fs-13 fc-777 fw-400">(장)6.15 x (폭)2.20 x (고)2.45 x 1대 = </span><span class="fc-orange fw-400">33CBM</span></p>
-						</div>
-					</div>
+					</form>
 				</div>
-				
+
+				<div id="fa_right">
+						<div class="title"><span>실시간</span> 접수현황</div>
+						<div class="orderlist">
+							<marquee behavior="scroll" direction="up" height="150">
+							<ul>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+							</ul>
+							</marquee>																																								
+						</div>
+				</div>
+	
 			</div>
 
 				
@@ -88,8 +137,211 @@
 
 
 
-
-
+			<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
+			<script>
+				function sAddress() {
+					new daum.Postcode({
+						oncomplete: function(data) {
+							var fullRoadAddr = data.roadAddress; // 도로명 주소 변수
+							var extraRoadAddr = ''; // 도로명 조합형 주소 변수
+			
+							if(data.bname !== '' && /[동|로|가]$/g.test(data.bname)){
+								extraRoadAddr += data.bname;
+							}
+							if(data.buildingName !== '' && data.apartment === 'Y'){
+							   extraRoadAddr += (extraRoadAddr !== '' ? ', ' + data.buildingName : data.buildingName);
+							}
+							if(extraRoadAddr !== ''){
+								extraRoadAddr = ' (' + extraRoadAddr + ')';
+							}
+							if(fullRoadAddr !== ''){
+								fullRoadAddr += extraRoadAddr;
+							}
+							document.getElementById('s_postcode').value = data.zonecode; //5자리 새우편번호 사용
+							document.getElementById('s_roadAddress').value = fullRoadAddr;
+							document.getElementById('saddr').value = data.sido+' '+data.sigungu+' '+data.bname;
+							document.getElementById('saddr1').value = data.sido;
+							document.getElementById('saddr2').value = data.sigungu;
+							document.getElementById('saddr3').value = data.bname;								
+							document.getElementById('s_bcode').value = data.bcode;						
+			
+						}
+					}).open();
+				}
+				function eAddress() {
+					new daum.Postcode({
+						oncomplete: function(data) {
+							var fullRoadAddr = data.roadAddress; // 도로명 주소 변수
+							var extraRoadAddr = ''; // 도로명 조합형 주소 변수
+			
+							if(data.bname !== '' && /[동|로|가]$/g.test(data.bname)){
+								extraRoadAddr += data.bname;
+							}
+							if(data.buildingName !== '' && data.apartment === 'Y'){
+							   extraRoadAddr += (extraRoadAddr !== '' ? ', ' + data.buildingName : data.buildingName);
+							}
+							if(extraRoadAddr !== ''){
+								extraRoadAddr = ' (' + extraRoadAddr + ')';
+							}
+							if(fullRoadAddr !== ''){
+								fullRoadAddr += extraRoadAddr;
+							}
+							document.getElementById('e_postcode').value = data.zonecode; //5자리 새우편번호 사용
+							document.getElementById('e_roadAddress').value = fullRoadAddr;
+							document.getElementById('eaddr').value = data.sido+' '+data.sigungu+' '+data.bname;				
+							document.getElementById('eaddr1').value = data.sido;
+							document.getElementById('eaddr2').value = data.sigungu;
+							document.getElementById('eaddr3').value = data.bname;	
+							document.getElementById('e_bcode').value = data.bcode;								
+			
+						}
+					}).open();
+				}	
+			</script>
+			<script language="javascript">
+			//이사일 선택
+			$('#moveDate').datepicker();
+			
+			$('.btn_movedate').click(function() {
+				$('#moveDate').datepicker('show');
+			});
+			$('.movetab').click(function() {
+				$('.movetab').removeClass('on');
+				$(this).addClass('on');
+				$('#movetype').val($(this).attr('title'));
+			});
+			
+			$('.board_box .title').click(function() {
+				$('.board_box .title').removeClass('on');
+				$(this).addClass('on');
+				
+				$('.board_box .mb1').css('display','none');
+				$('.board_box .mb2').css('display','none');
+				$('.'+$(this).attr('title')).css('display','block');
+			});
+			
+			$('.p_tab').click(function() {
+				$('.p_tab').removeClass('on');
+				$(this).addClass('on');
+				$('.week_praise').css('display','none');
+				$('.month_praise').css('display','none');
+				$('.real_praise').css('display','none');		
+				$('.'+$(this).attr('title')).css('display','block');
+			});
+			
+			$('.week_praise .paging ul li').click(function() {
+				if($(this).attr('value')=='11'){
+					document.location.href='/sub05/sub05_2_2.asp';
+				}else{
+					for(var i=1;i<=10;i++){
+						$('.week_praise .praise_content'+i).css('display','none');
+					}
+					$('.week_praise .praise_content'+$(this).attr('value')).css('display','block');
+					$('.week_praise .paging ul li').removeClass('on');
+					$(this).addClass('on');
+				}
+			});
+			
+			$('.month_praise .paging ul li').click(function() {
+				if($(this).attr('value')=='11'){
+					document.location.href='/sub05/sub05_2_2.asp';
+				}else{
+					for(var i=1;i<=10;i++){
+						$('.month_praise .praise_content'+i).css('display','none');
+					}
+					$('.month_praise .praise_content'+$(this).attr('value')).css('display','block');
+					$('.month_praise .paging ul li').removeClass('on');
+					$(this).addClass('on');
+				}	
+			});
+			
+			$('.real_praise .paging ul li').click(function() {
+				if($(this).attr('value')=='11'){
+					document.location.href='/sub05/sub05_2_1.asp';
+				}else{
+					for(var i=1;i<=10;i++){
+						$('.real_praise .praise_content'+i).css('display','none');
+					}
+					$('.real_praise .praise_content'+$(this).attr('value')).css('display','block');
+					$('.real_praise .paging ul li').removeClass('on');
+					$(this).addClass('on');
+				}	
+			});
+			
+			$('.btn_praise01').click(function() {
+				document.location.href="/sub05/sub05_2_1.asp";
+			});
+			$('.btn_praise02').click(function() {
+				document.location.href="/sub05/sub05_2_3.asp";
+			});
+			$('.btn_praise03').click(function() {
+				document.location.href="/sub05/sub05_1_4.asp";
+			});
+			
+			$('.banner_box .box01').click(function() {
+				document.location.href="/sub07/sub07_3_4.asp";
+			});
+			$('.banner_box .box02').click(function() {
+				document.location.href="/sub07/sub07_5_2.asp";
+			});
+			$('.banner_box .box03').click(function() {
+				document.location.href="/sub07/sub07_3_5.asp";
+			});
+			$('.banner_box .box04').click(function() {
+				document.location.href="/sub07/sub07_4_1.asp";
+			});
+			
+			var chk_ = document.cookie;
+			if (chk_.indexOf("popup_1=2") > -1){
+				$(".topSliderArea").css("display","none");
+			}
+			
+			function setTeamList(val){
+				with(frm_teamlist){
+					sidoname.value = val;
+					target = "iframe_team_list";
+					action = "/sub03/iframe_main_team_list.asp";
+					submit();
+				}
+				
+			}
+			function sendOption(){
+				with(frm_teamlist){
+					target = "iframe_team_list";
+					action = "/sub03/iframe_main_team_list.asp";
+					submit();
+				}
+			}
+			
+			function bookmark(){
+				window.external.AddFavorite('http://www.yes2404.com', '이사,포장이사는 예스이사공사')
+			}
+			
+			function teamchange(biz_sn)
+			{
+				//alert($("#formselect1 option:selected").attr("car5_yn"));
+				var car5t_yn = document.getElementById("formselect1").options[document.getElementById("formselect1").selectedIndex].getAttribute("CAR5_YN");
+				if(car5t_yn == "Y") location.href = "/sub03/sub03_1_0_5T.asp?biz_sn="+biz_sn
+				else location.href = "/sub03/sub03_1_0.asp?biz_sn="+biz_sn;
+			}
+			
+			</script>
+			<script language="javascript">
+				function send_it(){
+					with(frm_easy){
+						if(!custname.value){alert("고객명을 입력해 주세요.");custname.focus();return;}
+						if(!hp2.value || !hp3.value){alert("연락처를 입력해 주세요.");hp2.focus();return;}
+						if(!movedate.value){alert("이사일을 입력해 주세요.");movedate.focus();return;}
+						if(!saddr.value){alert("출발지 주소를 입력해 주세요.");saddr.focus();return;}
+						if(!eaddr.value){alert("도착지 주소를 입력해 주세요.");eaddr.focus();return;}	
+						if(!chkinfo[0].checked){alert("개인정보취급방침에 동의하셔야 서비스이용 가능합니다.");return;}		
+						
+						action="/sub02/easy_insert_proc.asp";
+						target="iframe_proc";
+						submit();												
+					}
+				}
+			</script>
 
 
 
@@ -114,6 +366,7 @@
 
     </div>
     
+<% include ./include/footer.ejs %> 
   </body>
 </html>
 

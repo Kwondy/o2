@@ -1,3 +1,4 @@
+/* 오투이사에 바란다 */
 var mongoose = require('mongoose');
 var boardSchema = mongoose.Schema({
     writer: String,
@@ -21,4 +22,4 @@ boardSchema.virtual("createdDate")
 
 
 
-module.exports =  mongoose.model('boardAs', boardSchema);
+module.exports =  mongoose.model('boardas', boardSchema);

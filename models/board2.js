@@ -1,3 +1,4 @@
+/* 방문견적 변경/취소 */
 var mongoose = require('mongoose');
 var boardSchema = mongoose.Schema({
     writer: String,
