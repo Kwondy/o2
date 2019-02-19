@@ -16,13 +16,13 @@
 			<!--<div class="cycle-slideshow" data-cycle-fx="scrollHorz" data-cycle-pause-on-hover="true" data-cycle-speed="500">-->
 			<div class="cycle-slideshow">			
 				<img src="/images/main_banner_01.jpg" style="width:100%;"/>
-				<img src="/images/main_banner_02.jpg" style="width:100%;" />
-				<img src="/images/main_banner_03.jpg" style="width:100%;" />
+				<!-- <img src="/images/main_banner_02.jpg" style="width:100%;" />
+				<img src="/images/main_banner_03.jpg" style="width:100%;" /> -->
 			</div>
 		<div class="floating-area">
 			<div id="contact-info">
 				<div id="ci_top">
-					<img src="/images/icon/main_ico_01.png" width="30" style="margin-top:5px;"/>고객상담전화 <span id="main_tel">1577-2404</span>
+					<img src="/images/icon/main_ico_01.png" width="30" style="margin-top:5px;"/>고객상담전화 <span id="main_tel">02-926-3301</span>
 				</div>
 				<div id="ci_bottom">
 					<img src="/images/icon/main_ico_02.png" width="26" height="26" style="margin-top:-3px;"/><span id="time">고객센터 운영시간 안내</span>
@@ -52,9 +52,9 @@
 						<input type="hidden" name="e_bcode" id="e_bcode" value=""/>	
 					<div class="regform">
 						<div class="tabs">
-							<div id="move1" class="movetab on" title="가정이사">가정이사</div>
-							<div id="move2" class="movetab" title="보관이사">보관이사</div>
-							<div id="move3" class="movetab" title="사무실이사">사무실이사</div>
+							<div id="move1" class="movetab on" title="가정이사" name="move1">가정이사</div>
+							<div id="move2" class="movetab" title="보관이사" name="move2">보관이사</div>
+							<div id="move3" class="movetab" title="사무실이사" name="move3">사무실이사</div>
 						</div>
 						<ul>
 							<li>
@@ -89,9 +89,9 @@
 							<li>
 								<select title="짐양" id="amount" name="amount" class="main_reg_select w170 ">
 									<option value="">이삿짐 양</option>
-									<option value="-1">짐이적은편</option>
-									<option value="0">보통</option>
-									<option value="1">짐이많은편</option>
+									<option value="적음">짐이적은편</option>
+									<option value="보통">보통</option>
+									<option value="많음">짐이많은편</option>
 								</select>
 								<input id="moveDate" name="movedate" class="main_reg_text w136" type="text" readonly placeholder="이사일">
 								<img src="/images/icon/main_ico_05.png" class="btn_movedate" style="margin-top:2px;cursor:pointer;"/>
@@ -336,8 +336,7 @@
 						if(!eaddr.value){alert("도착지 주소를 입력해 주세요.");eaddr.focus();return;}	
 						if(!chkinfo[0].checked){alert("개인정보취급방침에 동의하셔야 서비스이용 가능합니다.");return;}		
 						
-						action="/sub02/easy_insert_proc.asp";
-						target="iframe_proc";
+						action="/easy_insert";
 						submit();												
 					}
 				}

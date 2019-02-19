@@ -628,7 +628,7 @@ input[type=button], .tab {
 
 .floating-area #contact-info #ci_top #main_tel{
 	line-height: 35px;
-	font-size: 30px;	
+	font-size: 24px;	
 	color: #fff200;
 	letter-spacing: -0.02px;
 }
@@ -2058,7 +2058,7 @@ body.main p.more a {
 	left: 0;
 	width: 83px;
 	height: 44px;
-	background: url(../../images/logo/kgb.png) 8px center no-repeat;
+	/* background: url(../../images/logo/kgb.png) 8px center no-repeat; */
 }
 #footer .full-div-line {
 	position: relative;

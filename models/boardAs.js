@@ -4,7 +4,7 @@ var boardSchema = mongoose.Schema({
     writer: String,
     password: String,
     title: String,
-    contents: String,
+    content: String,
     tel1: String,
     tel2: String,
     tel3: String,

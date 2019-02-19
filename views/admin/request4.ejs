@@ -1,0 +1,63 @@
+<html>
+<title>Admin</title>
+</head>
+
+    
+<% include ./head.ejs %> 
+
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-2">
+        <% include ./nav.ejs %> 
+      </div>
+      <div class="col-10">
+        <div class="margin-top-50"></div>
+        <div class="col-md-12">
+            <h4>간편전화 상담</h4>
+            <div class="table-responsive">
+              <table id="mytable" class="table table-bordred table-striped">
+                <thead>
+                  <th>제목</th>
+                  <th>작성자</th>
+                  <th>작성일</th>             
+                </thead>
+                <tbody>
+                        <%if(contents.length>0){%>
+							<%var i = 0;%>
+							<%contents.forEach(function(item){%>
+							<%i++;%>
+                  <tr>
+                      <td><a href="/admin/request4<%= item._id %>"><%=item.movetype%></a></td>
+                      <td><%=item.custname%></td>
+                      <td><%=dateFormatChange(item.date)%></td>
+                  </tr>
+                  <%})%>
+						<%} else {%>
+						<tr>
+							<td colspan="5">게시물이 없습니다.</td>
+						</tr>
+						<%}%>
+                </tbody>
+            </table>
+
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+
+
+<%
+function dateFormatChange(date) {
+    var options = {
+        year: "numeric", month: "numeric",
+        day: "numeric", hour: "2-digit", minute: "2-digit"
+    };
+
+    return date.toLocaleTimeString("ko-KR", options);
+}
+%>

@@ -26,7 +26,7 @@ router.get('/sub04_01_01', function(req,res){
         boardA.find({deleted:false}).sort({date:-1}).skip(skipSize).limit(limitSize).exec(function(err, pageContents) {
         // db에서 날짜 순으로 데이터들을 가져옴
         if(err) throw err;
-        res.render('sub04_01_01', {title: "계약여부 문의", contents: pageContents, pagination: pageNum, searchWord: ''}); 
+        res.render('sub04/sub04_01_01', {title: "계약여부 문의", contents: pageContents, pagination: pageNum, searchWord: ''}); 
         // board.ejs의 title변수엔 “Board”를, contents변수엔 db 검색 결과 json 데이터를 저장해줌.
     });
     });
@@ -56,7 +56,7 @@ router.post('/sub04_01_01', function(req, res){
 
 
 router.get('/sub04_01_01_new', function(req, res, next) {
-    res.render('sub04_01_01_new', { title: '계약여부 문의' });
+    res.render('sub04/sub04_01_01_new', { title: '계약여부 문의' });
 });
 
  
@@ -71,7 +71,7 @@ router.get('/sub04_01_01/view', function(req, res){
 
          rawContent.save(function(err){ // 변화된 조횟수 저장
              if(err) throw err;
-             res.render('sub04_01_01_detail',{title: "계약여부 문의", content:rawContent, replyPage: reply_pg}); // db에서 가져온 내용을 뷰로 렌더링
+             res.render('sub04/sub04_01_01_detail',{title: "계약여부 문의", content:rawContent, replyPage: reply_pg}); // db에서 가져온 내용을 뷰로 렌더링
          });
      })
  });
@@ -99,7 +99,7 @@ router.get('/sub04_01_02/search', function(req, res){
     boardA.find({deleted:false, $or:[{title:searchCondition},{contents:searchCondition},{writer:searchCondition}]}).sort({date:-1}).exec(function(err, searchContents){
         if(err) throw err;
         pageNum = Math.ceil(searchCount/limitSize);
-        res.render('sub04_01_02', {title: "Board", contents: searchContents, pagination: pageNum, searchWord: search_word});
+        res.render('sub04/sub04_01_02', {title: "Board", contents: searchContents, pagination: pageNum, searchWord: search_word});
     });
  });
  
@@ -166,7 +166,7 @@ router.get('/sub04_01_02', function(req,res){
        boardB.find({deleted:false}).sort({date:-1}).skip(skipSize).limit(limitSize).exec(function(err, pageContents) {
        // db에서 날짜 순으로 데이터들을 가져옴
        if(err) throw err;
-       res.render('sub04_01_02', {title: "방문견적 변경/취소", contents: pageContents, pagination: pageNum, searchWord: ''}); 
+       res.render('sub04/sub04_01_02', {title: "방문견적 변경/취소", contents: pageContents, pagination: pageNum, searchWord: ''}); 
        // board.ejs의 title변수엔 “Board”를, contents변수엔 db 검색 결과 json 데이터를 저장해줌.
    });
    });
@@ -198,7 +198,7 @@ router.post('/sub04_01_02', function(req, res){
 
 
 router.get('/sub04_01_02_new', function(req, res, next) {
-   res.render('sub04_01_02_new', { title: '방문견적 변경/취소' });
+   res.render('sub04/sub04_01_02_new', { title: '방문견적 변경/취소' });
 });
 
 
@@ -213,7 +213,7 @@ router.get('/sub04_01_02/view', function(req, res){
 
         rawContent.save(function(err){ // 변화된 조횟수 저장
             if(err) throw err;
-            res.render('sub04_01_02_detail',{title: "방문견적 변경/취소", content:rawContent, replyPage: reply_pg}); // db에서 가져온 내용을 뷰로 렌더링
+            res.render('sub04/sub04_01_02_detail',{title: "방문견적 변경/취소", content:rawContent, replyPage: reply_pg}); // db에서 가져온 내용을 뷰로 렌더링
         });
     })
 });
@@ -241,7 +241,7 @@ router.get('/sub04_01_02/search', function(req, res){
    boardB.find({deleted:false, $or:[{title:searchCondition},{contents:searchCondition},{writer:searchCondition}]}).sort({date:-1}).exec(function(err, searchContents){
        if(err) throw err;
        pageNum = Math.ceil(searchCount/limitSize);
-       res.render('sub04_01_02', {title: "Board", contents: searchContents, pagination: pageNum, searchWord: search_word});
+       res.render('sub04/sub04_01_02', {title: "Board", contents: searchContents, pagination: pageNum, searchWord: search_word});
    });
 });
 
@@ -305,7 +305,7 @@ router.get('/sub04_01_03', function(req,res){
        boardC.find({deleted:false}).sort({date:-1}).skip(skipSize).limit(limitSize).exec(function(err, pageContents) {
        // db에서 날짜 순으로 데이터들을 가져옴
        if(err) throw err;
-       res.render('sub04_01_03', {title: "현금영수증 문의", contents: pageContents, pagination: pageNum, searchWord: ''}); 
+       res.render('sub04/sub04_01_03', {title: "현금영수증 문의", contents: pageContents, pagination: pageNum, searchWord: ''}); 
        // board.ejs의 title변수엔 “Board”를, contents변수엔 db 검색 결과 json 데이터를 저장해줌.
    });
    });
@@ -337,7 +337,7 @@ router.post('/sub04_01_03', function(req, res){
 
 
 router.get('/sub04_01_03_new', function(req, res, next) {
-   res.render('sub04_01_03_new', { title: '현금영수증 문의' });
+   res.render('sub04/sub04_01_03_new', { title: '현금영수증 문의' });
 });
 
 
@@ -352,7 +352,7 @@ router.get('/sub04_01_03/view', function(req, res){
 
         rawContent.save(function(err){ // 변화된 조횟수 저장
             if(err) throw err;
-            res.render('sub04_01_03_detail',{title: "현금영수증 문의", content:rawContent, replyPage: reply_pg}); // db에서 가져온 내용을 뷰로 렌더링
+            res.render('sub04/sub04_01_03_detail',{title: "현금영수증 문의", content:rawContent, replyPage: reply_pg}); // db에서 가져온 내용을 뷰로 렌더링
         });
     })
 });
@@ -372,7 +372,7 @@ router.get('/sub04_01_03/search', function(req, res){
    var searchCondition = {$regex:search_word};
    boardC.find({deleted:false, $or:[{title:searchCondition},{contents:searchCondition},{writer:searchCondition}]}).sort({date:-1}).exec(function(err, searchContents){
        if(err) throw err;
-       res.render('sub04_01_03', {title: "Board", contents: searchContents});
+       res.render('sub04/sub04_01_03', {title: "Board", contents: searchContents});
    });
 });
 
@@ -436,7 +436,7 @@ router.get('/sub04_01_04', function(req,res){
        boardD.find({deleted:false}).sort({date:-1}).skip(skipSize).limit(limitSize).exec(function(err, pageContents) {
        // db에서 날짜 순으로 데이터들을 가져옴
        if(err) throw err;
-       res.render('sub04_01_04', {title: "기타 고객문의", contents: pageContents, pagination: pageNum, searchWord: ''}); 
+       res.render('sub04/sub04_01_04', {title: "기타 고객문의", contents: pageContents, pagination: pageNum, searchWord: ''}); 
        // board.ejs의 title변수엔 “Board”를, contents변수엔 db 검색 결과 json 데이터를 저장해줌.
    });
    });
@@ -468,7 +468,7 @@ router.post('/sub04_01_04', function(req, res){
 
 
 router.get('/sub04_01_04_new', function(req, res, next) {
-   res.render('sub04_01_04_new', { title: '기타 고객문의' });
+   res.render('sub04/sub04_01_04_new', { title: '기타 고객문의' });
 });
 
 
@@ -483,7 +483,7 @@ router.get('/sub04_01_04/view', function(req, res){
 
         rawContent.save(function(err){ // 변화된 조횟수 저장
             if(err) throw err;
-            res.render('sub04_01_04_detail',{title: "기타 고객문의", content:rawContent, replyPage: reply_pg}); // db에서 가져온 내용을 뷰로 렌더링
+            res.render('sub04/sub04_01_04_detail',{title: "기타 고객문의", content:rawContent, replyPage: reply_pg}); // db에서 가져온 내용을 뷰로 렌더링
         });
     })
 });
@@ -503,7 +503,7 @@ router.get('/sub04_01_04/search', function(req, res){
    var searchCondition = {$regex:search_word};
    boardD.find({deleted:false, $or:[{title:searchCondition},{contents:searchCondition},{writer:searchCondition}]}).sort({date:-1}).exec(function(err, searchContents){
        if(err) throw err;
-       res.render('sub04_01_04', {title: "Board", contents: searchContents});
+       res.render('sub04/sub04_01_04', {title: "Board", contents: searchContents});
    });
 });
 
@@ -548,26 +548,26 @@ router.get('/sub04_01_04/password', function(req, res){
 /* sub04_02_01 부분 */
 
 router.get('/sub04_02_01', function(req, res, next) {
-    res.render('sub04_02_01', { title: 'A/S 보상규정' });
+    res.render('sub04/sub04_02_01', { title: 'A/S 보상규정' });
 });
 
 /* sub04_02_02 부분 */
 
 router.get('/sub04_02_02', function(req, res, next) {
-    res.render('sub04_02_02', { title: 'A/S 안내' });
+    res.render('sub04/sub04_02_02', { title: 'A/S 안내' });
 });
 
 
 /* sub04_02_03 부분 */
 
 router.get('/sub04_02_03', function(req, res, next) {
-    res.render('sub04_02_03', { title: 'A/S 신청' });
+    res.render('sub04/sub04_02_03', { title: 'A/S 신청' });
 });
 
 /* sub04_03_01 부분 */
 
 router.get('/sub04_03_01', function(req, res, next) {
-    res.render('sub04_03_01', { title: '오투이사에 바란다' });
+    res.render('sub04/sub04_03_01', { title: '오투이사에 바란다' });
 });
 
 

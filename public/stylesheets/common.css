@@ -1,6 +1,9 @@
 @import 'https://fonts.googleapis.com/earlyaccess/notosanskr.css';
 @import 'https://fonts.googleapis.com/css?family=Exo:900';
 
+
+@media only screen and (min-width : 800px) {
+	
 /* css_reset */
 * { margin: 0; padding: 0; }
 html, body { width: 100%; height: 100%; position: relative; overflow-x: hidden; }
@@ -624,7 +627,7 @@ input[type=button], .tab {
 
 .floating-area #contact-info #ci_top #main_tel{
 	line-height: 35px;
-	font-size: 30px;	
+	font-size: 24px;	
 	color: #fff200;
 	letter-spacing: -0.02px;
 }
@@ -2004,7 +2007,7 @@ body.main p.more a {
 	left: 0;
 	width: 83px;
 	height: 44px;
-	background: url(../../images/logo/kgb.png) 8px center no-repeat;
+	/* background: url(../../images/logo/kgb.png) 8px center no-repeat; */
 }
 #footer .full-div-line {
 	position: relative;
@@ -4804,4 +4807,12 @@ ul.og-box li.foot, ul.gr-box li.foot {
 
 .delete_confirm{
 	display:none;
+}
+
+
+
+}
+@media only screen and (min-device-width : 320px) and ( max-device-width : 767px){
+
+
 }

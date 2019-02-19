@@ -12,6 +12,9 @@ var sub01 = require('./routes/sub01');
 var sub02 = require('./routes/sub02');
 var sub03 = require('./routes/sub03');
 var sub04 = require('./routes/sub04');
+var sub05 = require('./routes/sub05');
+var sub06 = require('./routes/sub06');
+var admin = require('./routes/admin');
 
 var app = express();
 
@@ -52,6 +55,10 @@ app.use('/sub01', sub01);
 app.use('/sub02', sub02);
 app.use('/sub03', sub03);
 app.use('/sub04', sub04);
+app.use('/sub05', sub05);
+app.use('/sub06', sub06);
+app.use('/admin', admin);
+
 
 
 // catch 404 and forward to error handler

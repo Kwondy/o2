@@ -1,0 +1,76 @@
+<html>
+<title>Admin</title>
+</head>
+
+    
+<% include ./head.ejs %> 
+
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-2">
+        <% include ./nav.ejs %> 
+      </div>
+      <div class="col-10">
+          <div class="contentBox">
+              <h3 class="contentBoxTop">
+                  <%= title %>
+              </h3>
+              <div class="post-info">
+                <div><span>작성자</span> :
+                  <%=contents.custname%>
+                </div>
+                <div><span>Created</span> :
+                  <%=dateFormatChange(contents.date)%>
+                </div>
+                
+              </div> <!-- post-info end -->
+            </div> <!-- col end-->
+            <div class="">
+              <div class="post-body">
+                <h4>고객정보</h4>
+                  <div>작성자 :&nbsp;
+                    <span class="admin_text"><%=contents.custname%></span>
+                  </div>
+                  <div>전화번호 :&nbsp;
+                    <span class="admin_text"><%=contents.hp1%>-<%=contents.hp2%>-<%=contents.hp3%></span>
+                  </div>
+                  <div>이사량 :&nbsp;
+                    <span class="admin_text"><%=contents.amount%></span>
+                  </div>
+                  <div>이사일 :&nbsp;
+                    <span class="admin_text"><%=contents.movedate%></span>
+                  </div>
+                  <div>출발지주소 :&nbsp;
+                    <span class="admin_text"><%=contents.saddr%></span>
+                  </div>
+                  <div>도착지주소 :&nbsp;
+                    <span class="admin_text"><%=contents.eaddr%></span>
+                  </div>
+              </div>
+            </div> <!-- col end-->
+          </div> <!-- row end -->
+          <div class="buttons text-right margin-top-10">
+            <a class="btn btn-dark" href="/admin/req">Back</a>
+            
+          </div>
+  
+    </div>
+  </div>
+</body>
+
+</html>
+
+
+<%
+function dateFormatChange(date) {
+    var options = {
+        year: "numeric", month: "numeric",
+        day: "numeric", hour: "2-digit", minute: "2-digit"
+    };
+
+    return date.toLocaleTimeString("ko-KR", options);
+}
+%>
