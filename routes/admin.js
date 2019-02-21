@@ -107,7 +107,7 @@ router.get('/request1:id', function(req, res) {
   .exec(function (err, contents) {
     if(err) return res.json(err);
 
-    res.render("admin/request1_detail", { contents: contents, title: '포장이사견적' });
+    res.render("admin/request1_detail", { contents: contents, title: '포장이사 견적' });
 
   });
 
@@ -155,7 +155,7 @@ router.get('/request2:id', function(req, res) {
   .exec(function (err, contents) {
     if(err) return res.json(err);
 
-    res.render("admin/request2_detail", { contents: contents, title: '보관이사견적' });
+    res.render("admin/request2_detail", { contents: contents, title: '보관이사 견적' });
 
   });
 
@@ -199,7 +199,7 @@ router.get('/request3:id', function(req, res) {
   .exec(function (err, contents) {
     if(err) return res.json(err);
 
-    res.render("admin/request3_detail", { contents: contents, title: '사무실이전' });
+    res.render("admin/request3_detail", { contents: contents, title: '사무실이전 견적' });
 
   });
 
@@ -243,7 +243,7 @@ router.get('/request4:id', function(req, res) {
   .exec(function (err, contents) {
     if(err) return res.json(err);
 
-    res.render("admin/request4_detail", { contents: contents, title: '해외이사' });
+    res.render("admin/request4_detail", { contents: contents, title: '간편전화 상담' });
 
   });
 
@@ -288,7 +288,7 @@ router.get('/services1:id', function(req, res) {
   .exec(function (err, contents) {
     if(err) return res.json(err);
 
-    res.render("admin/services1_detail", { contents: contents, title: '해외이사' });
+    res.render("admin/services1_detail", { contents: contents, title: '에어컨설치서비스신청' });
 
   });
 
@@ -332,7 +332,7 @@ router.get('/services2:id', function(req, res) {
   .exec(function (err, contents) {
     if(err) return res.json(err);
 
-    res.render("admin/services2_detail", { contents: contents, title: '해외이사' });
+    res.render("admin/services2_detail", { contents: contents, title: '청소서비스신청' });
 
   });
 
@@ -496,7 +496,7 @@ router.get('/boardas:id', function(req, res) {
   .exec(function (err, contents) {
     if(err) return res.json(err);
 
-    res.render("admin/boardas_detail", { contents: contents, title: '해외이사' });
+    res.render("admin/boardas_detail", { contents: contents, title: '오투이사에 바란다' });
 
   });
 
