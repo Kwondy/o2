@@ -237,7 +237,7 @@ input[type=button], .tab {
 	font-size: 11px;
 	color: #fff;
 	text-align: center;
-	background: #00a2b2;
+	background: #40af37;
 	cursor: pointer;
 }
 
@@ -269,7 +269,7 @@ input[type=button], .tab {
 	font-size: 11px;
 	color: #fff;
 	text-align: center;
-	background: #00a2b2;
+	background: #40af37;
 	cursor: pointer;
 }
 #header #sitemap_close:before {
@@ -291,7 +291,7 @@ input[type=button], .tab {
 	font-size: 11px;
 	color: #fff;
 	text-align: center;
-	background: #00a2b2;
+	background: #40af37;
 	cursor: pointer;
 }
 #header #search_btn:before {
@@ -323,7 +323,7 @@ input[type=button], .tab {
 	font-size: 11px;
 	color: #fff;
 	text-align: center;
-	background: #00a2b2;
+	background: #40af37;
 	cursor: pointer;
 }
 #header #search_btn_close:before {
@@ -366,7 +366,7 @@ input[type=button], .tab {
 	width: 200px;
 	height: 30px;
 	margin-left:20px;	
-	background-color:#00a2b2; 
+	background-color:#40af37; 
 	color:#ffffff; 
 	text-align:center;
 }
@@ -443,7 +443,7 @@ input[type=button], .tab {
 	margin-right: 50px;
 	font-size: 15px;
 	width: 150px;
-	border-bottom:1px solid #00a3b4;
+	border-bottom:1px solid #40af37;
 }
 #header ul.depth-2 > li > a {
 	position: relative;
@@ -472,7 +472,7 @@ input[type=button], .tab {
 #header ul > li:hover > a,
 #header ul > li.active > a {
 	font-weight: bold;
-	color: #00a3b4;
+	color: #40af37;
 }
 #header .sitemap {
 	position: relative;
@@ -597,7 +597,7 @@ input[type=button], .tab {
 	width: 100%;
 	max-width: 1206px;
 	height: 223px;
-	margin: -100px auto 0px;
+	margin: -223px auto 0px;
 	z-index:999;
 } 
 .floating-area p.title {
@@ -665,7 +665,7 @@ input[type=button], .tab {
 	float: right;
 	width: 814px;
 	height: 223px;
-	background: #4eb5c4;
+	background: #40af37;
 	opacity:0.9;	
 	color: #fff;
 }
@@ -696,7 +696,7 @@ input[type=button], .tab {
 	width:78px;
 	text-align:center;
 	vertical-align:middle;
-	background-color: #00a6b8;
+	background-color: #40af37;
 	margin-bottom:1px;
 	cursor:pointer;
 }
@@ -1326,7 +1326,7 @@ body.main p.more a {
 	color: #fff;
 	font-weight: 500;
 	margin-top: 4px;
-	background-color: #00a2b2;
+	background-color: #40af37;
 	background-image: url(../../images/icon/search_btn.png);
 	background-position: calc(50% - 46px) center;
 	background-repeat: no-repeat;
@@ -1358,7 +1358,7 @@ body.main p.more a {
 	font-size: 17px;
 	font-weight: 300;
 	line-height: 43px;
-	background: #00a2b2;
+	background: #40af37;
 }
 #main_content .stats-area .title:before, #content .stats-area .title:after {
 	content: "";
@@ -1421,7 +1421,7 @@ body.main p.more a {
 	font-size: 16px;
 	color: #fff;
 	text-indent: 30px;
-	background: #00a3b4;
+	background: #40af37;
 }
 #main_content .stats-area input#bad {
 	background: #f35454;
@@ -1928,7 +1928,7 @@ body.main p.more a {
 	left: -100%;
 	width: 300%;
 	height:50px;
-	background: #00a2b2;
+	background: #40af37;
 	text-align:center;
 }
 #footer .family {
@@ -1936,7 +1936,7 @@ body.main p.more a {
 	width: 1206px;
 	padding: 11px 0 10px 7px;
 	box-sizing: border-box;
-	background: #00a2b2;
+	background: #40af37;
 }
 #footer .family li {
 	position: relative;
@@ -1958,48 +1958,9 @@ body.main p.more a {
 #footer .family li a {
 	display: block;
 	height: 21px;
-	font-size: 0;
-	text-indent: -999px;
-	overflow: hidden;
-	background-image: url(../../images/img_set.png);
-	background-repeat: no-repeat;
+	color:white;
 }
-#footer .family li.a a {
-	width: 86px;
-	background-position: -150px -131px;
-}
-#footer .family li.b a {
-	width: 87px;
-	background-position: -150px -152px;
-}
-#footer .family li.c a {
-	width: 73px;
-	background-position: -150px -173px;
-}
-#footer .family li.d a {
-	width: 72px;
-	background-position: -150px -194px;
-}
-#footer .family li.e a {
-	width: 44px;
-	background-position: -150px -215px;
-}
-#footer .family li.f a {
-	width: 98px;
-	background-position: -150px -236px;
-}
-#footer .family li.g a {
-	width: 105px;
-	background-position: -150px -257px;
-}
-#footer .family li.h a {
-	width: 119px;
-	background-position: -150px -278px;
-}
-#footer .family li.i a {
-	width: 113px;
-	background-position: -150px -299px;
-}
+
 
 #footer .menu {
 	float: left;
@@ -2357,7 +2318,7 @@ body.main p.more a {
 	margin: 0 7px;
 }
 .cont2 .box-right .btn-area .btn.type1 {
-	background: #00a3b4;
+	background: #40af37;
 }
 .cont2 .box-right .stats-detail {
 	background: #fff;
@@ -2393,7 +2354,7 @@ body.main p.more a {
 	padding-top: 6px;
 }
 .cont2 .box-right .stats-detail .name {
-	color: #00a3b4;
+	color: #40af37;
 }
 .cont2 .box-right .stats-detail .date {
 	color: #909090;
@@ -2621,7 +2582,7 @@ body.main p.more a {
 .cont3 .box-day .month {
 	float: left;
 	font-size: 18px;
-	color: #00a3b4;
+	color: #40af37;
 	line-height: 25px;
 }
 .cont3 .box-day .month .bg-arrow {
@@ -2774,7 +2735,7 @@ body.main p.more a {
 .layer-call {
 	width: 220px;
 	height: 195px;
-	background: #00a3b4;
+	background: #40af37;
 	position: absolute;
 	top: 594px;
 	left: 0;
@@ -2888,7 +2849,7 @@ body.main p.more a {
 	font-size: 13px;
 }
 #footer .color-mint {
-	color: #00a3b4;
+	color: #40af37;
 }
 #footer .color-red {
 	color: #f35454;
@@ -3070,7 +3031,7 @@ body.sub #footer .broadcast li span.sbs {
 	font-size: 24px;
 	font-weight: normal;
 	color: #fff;
-	background: #00a3b4;
+	background: #40af37;
 }
 #side-nav .nav-section {
 	padding: 15px 20px;
@@ -3086,7 +3047,7 @@ body.sub #footer .broadcast li span.sbs {
 	display:none;
 }
 #side-nav .on, #side-nav .on a, #side-nav .on:before, #side-nav ul li:hover a, #side-nav ul li:hover:before {
-	color: #00a3b4;
+	color: #40af37;
 }
 #side-nav ul {
 	margin-top: 10px;
@@ -3197,7 +3158,7 @@ body.sub #footer .broadcast li span.sbs {
 
 /* background */
 .bg-turquoise {
-	background: #00a3b4 !important;
+	background: #40af37 !important;
 }
 .bg-orange {
 	background: #ff7f00 !important;
@@ -3265,7 +3226,7 @@ body.sub #footer .broadcast li span.sbs {
 	color: #ff7f00 !important;
 }
 .fc-turquoise, .fc-turquoise a {
-	color: #00a3b4 !important;
+	color: #40af37 !important;
 }
 
 .underline {
@@ -3540,7 +3501,7 @@ body.sub #footer .broadcast li span.sbs {
 	padding-left:15px;
 }
 #floating_bottom input[type=button] {
-	background-color:#00a2b2;
+	background-color:#40af37;
 	color:#fff;
 	width:120px;
 	height:30px;
@@ -3562,7 +3523,7 @@ body.sub #footer .broadcast li span.sbs {
 	width: 160px;
 	height: 30px;
 	line-height: 30px;
-	background: #00a2b1;
+	background: #40af37;
 	color : #fff;
 	border-radius : 3px;
 	margin-left:180px;

@@ -2,19 +2,30 @@
 <html>
   <head>
     <title></title>
-    <% include ./include/include.ejs %> 
-	<link rel='stylesheet' href='/stylesheets/main.css' />
+	<link rel="stylesheet" type="text/css" href="/stylesheets/main.css">
+	<link rel="stylesheet" type="text/css" href="/stylesheets/jquery-ui-1.10.3.min.css">	
+	<script type="text/javascript" src="/javascripts/jquery.min.js"></script>
+	<script type="text/javascript" src="/javascripts/jquery.imagemapster.min.js"></script>
+	<script type="text/javascript" src="/javascripts/jquery-ui-1.10.3.min.js"></script>
+	<script type="text/javascript" src="/javascripts/jquery.ui.datepicker-ko.js"></script>	
+	<script type="text/javascript" src="/javascripts/flickity.pkgd.min.js"></script>
+	<script type="text/javascript" src="/javascripts/modernizr.custom.63321.js"></script>	
+	<script type="text/javascript" src="/javascripts/jquery.cycle2.js"></script>	
+	<script type="text/javascript" src="/javascripts/jquery.cycle2.scrollVert.js"></script>	
+	<script type="text/javascript" src="/javascripts/jquery.cycle2.swipe.min.js"></script>			
+	<script type="text/javascript" src="/javascripts/common.js"></script>
+	<script type="text/javascript" src="/javascripts/main.js"></script>
   </head>
   <body class="main">
     <div id="wrap">
       <div id="header">
-      <% include ./include/nav.ejs %> 
+      <% include ./include/main_nav.ejs %> 
 	  </div>
-	
+
 	  
 	  <div class="main-banner">
 			<!--<div class="cycle-slideshow" data-cycle-fx="scrollHorz" data-cycle-pause-on-hover="true" data-cycle-speed="500">-->
-			<div class="cycle-slideshow">			
+			<div class="cycle-slideshow" style="">			
 				<img src="/images/main_banner_01.jpg" style="width:100%;"/>
 				<!-- <img src="/images/main_banner_02.jpg" style="width:100%;" />
 				<img src="/images/main_banner_03.jpg" style="width:100%;" /> -->
@@ -88,12 +99,12 @@
 							</li>
 							<li>
 								<select title="짐양" id="amount" name="amount" class="main_reg_select w170 ">
-									<option value="">이삿짐 양</option>
+									<option value="">이삿짐·운송 양</option>
 									<option value="적음">짐이적은편</option>
 									<option value="보통">보통</option>
 									<option value="많음">짐이많은편</option>
 								</select>
-								<input id="moveDate" name="movedate" class="main_reg_text w136" type="text" readonly placeholder="이사일">
+								<input id="moveDate" name="movedate" class="main_reg_text w136" type="text" readonly placeholder="이사·운송 양">
 								<img src="/images/icon/main_ico_05.png" class="btn_movedate" style="margin-top:2px;cursor:pointer;"/>
 							</li>
 							<li>
@@ -116,20 +127,21 @@
 						<div class="title"><span>실시간</span> 접수현황</div>
 						<div class="orderlist">
 							<marquee behavior="scroll" direction="up" height="150">
-							<ul>
-								<li></li>
-								<li></li>
-								<li></li>
-								<li></li>
-							</ul>
+							<%if(contents.length>0){%>
+								<%var i = 0;%>
+								<%contents.forEach(function(item){%>
+								<%i++;%>
+								<ul>
+									<li><%=item.custname%> <%=item.saddr%> <%=dateFormatChange(item.date)%></li>
+								</ul>
+								<%})%>
+								<%} else {%>
+								<%}%>
 							</marquee>																																								
 						</div>
 				</div>
-	
+
 			</div>
-
-				
-
 
 
 
@@ -357,12 +369,6 @@
 
 
 
-
-
-
-
-
-
     </div>
     
 <% include ./include/footer.ejs %> 
@@ -371,3 +377,17 @@
 
 
 
+
+
+
+
+<%
+function dateFormatChange(date) {
+    var options = {
+        year: "numeric", month: "numeric",
+        day: "numeric", hour: "2-digit", minute: "2-digit"
+    };
+
+    return date.toLocaleTimeString("ko-KR", options);
+}
+%>

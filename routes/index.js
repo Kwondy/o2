@@ -1,13 +1,20 @@
 var express = require('express');
 var router = express.Router();
-/* 청소서비스신청 */
+/* 간편이사 */
 var easy = require('../models/easyinsert');
 
-
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: '직거래이사서비스' });
+router.get('/', function(req, res) {
+  // var limitSize = 20;
+  // limit(limitSize).
+  easy.find({deleted:false}).sort({date:-1}).exec(function(err, contents) {
+      // db에서 날짜 순으로 데이터들을 가져옴
+      if(err) throw err;
+      res.render('index', {  contents: contents });
+    });
 });
+
+
 
 /* GET home page. */
 router.get('/include/policy', function(req, res, next) {
