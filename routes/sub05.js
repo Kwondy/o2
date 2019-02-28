@@ -3,63 +3,63 @@ var router = express.Router();
 
 /* GET sub01 page */
 router.get('/sub05_01_01', function(req, res, next) {
-    res.render('sub05/sub05_01_01', { title: '직거래이사서비스' });
+    res.render('sub05/sub05_01_01', { title: '거리계산 운송요금' });
 });
 
 router.get('/sub05_01_02', function(req, res, next) {
-    res.render('sub05/sub05_01_02', { title: '이사·화물품질정책' });
+    res.render('sub05/sub05_01_02', { title: '서울강남 출발요금' });
 });
 
 router.get('/sub05_01_03', function(req, res, next) {
-    res.render('sub05/sub05_01_03', { title: '차량구비 시스템' });
+    res.render('sub05/sub05_01_03', { title: '경기안산 출발요금' });
 });
 
 router.get('/sub05_01_04', function(req, res, next) {
-    res.render('sub05/sub05_01_04', { title: '포장박스안내' });
+    res.render('sub05/sub05_01_04', { title: '충북청주 출발요금' });
 });
 
 router.get('/sub05_01_05', function(req, res, next) {
-    res.render('sub05/sub05_01_05', { title: '서비스리콜 센터운영' });
+    res.render('sub05/sub05_01_05', { title: '충남대전 출발요금' });
 });
 
 router.get('/sub05_01_06', function(req, res, next) {
-    res.render('sub05/sub05_01_06', { title: '이사·화물 진행절차' });
+    res.render('sub05/sub05_01_06', { title: '전북전주 출발요금' });
 });
 
 router.get('/sub05_01_07', function(req, res, next) {
-    res.render('sub05/sub05_01_07', { title: '포장이사' });
+    res.render('sub05/sub05_01_07', { title: '전남광주 출발요금' });
 });
 
 router.get('/sub05_01_08', function(req, res, next) {
-    res.render('sub05/sub05_01_08', { title: '보관이사' });
+    res.render('sub05/sub05_01_08', { title: '경북대구 출발요금' });
 });
 
 router.get('/sub05_01_09', function(req, res, next) {
-    res.render('sub05/sub05_01_09', { title: '사무실이사' });
+    res.render('sub05/sub05_01_09', { title: '경남부산 출발요금' });
 });
 
 router.get('/sub05_01_10', function(req, res, next) {
-    res.render('sub05/sub05_01_10', { title: '해외이사' });
+    res.render('sub05/sub05_01_10', { title: '강원강릉 출발요금' });
 });
 
 router.get('/sub05_01_11', function(req, res, next) {
-    res.render('sub05/sub05_01_11', { title: '청소서비스안내' });
+    res.render('sub05/sub05_01_11', { title: '제주화물 운송요금' });
 });
 
 router.get('/sub05_01_12', function(req, res, next) {
-    res.render('sub05/sub05_01_12', { title: '에어컨서비스안내' });
+    res.render('sub05/sub05_01_12', { title: '화물택배 혼적요금' });
 });
 
 router.get('/sub05_01_13', function(req, res, next) {
-    res.render('sub05/sub05_01_13', { title: '에어컨서비스안내' });
+    res.render('sub05/sub05_01_13', { title: '퀵다마스 라보요금' });
 });
 
 router.get('/sub05_01_14', function(req, res, next) {
-    res.render('sub05/sub05_01_14', { title: '에어컨서비스안내' });
+    res.render('sub05/sub05_01_14', { title: '사다리차 카크레인' });
 });
 
 router.get('/sub05_01_15', function(req, res, next) {
-    res.render('sub05/sub05_01_15', { title: '에어컨서비스안내' });
+    res.render('sub05/sub05_01_15', { title: '기타차량 일대요금' });
 });
 
 module.exports = router;

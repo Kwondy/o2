@@ -122,6 +122,11 @@ h1, h2, h3, h4, h5, h6 { clear: both; }
 	fill: #333;
 }
 
+
+@media only screen and (min-width : 800px) {
+
+
+
 /* ---- page dots ---- */
 
 .flickity-page-dots {
@@ -1950,7 +1955,7 @@ body.main p.more a {
 	right: 0;
 	width: 1px;
 	height: 100%;
-	background: #8ac9d2;
+	background: white;
 }
 #footer .family li:last-child:after {
 	content: none;
@@ -3547,4 +3552,11 @@ body.sub #footer .broadcast li span.sbs {
 
 #formselect1::-ms-expand {
 	display: none;
+}
+
+
+
+}
+@media only screen and (min-device-width : 320px) and (max-device-width : 767px){
+
 }

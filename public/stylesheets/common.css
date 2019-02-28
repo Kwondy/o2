@@ -1899,7 +1899,7 @@ body.main p.more a {
 	right: 0;
 	width: 1px;
 	height: 100%;
-	background: #8ac9d2;
+	background: white;
 }
 #footer .family li:last-child:after {
 	content: none;

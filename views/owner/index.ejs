@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="/stylesheets/bootstrap.min.css" rel="stylesheet"> 
+      <link href="/stylesheets/login.css" rel="stylesheet">
+      
+<!-- jQuery -->
+<script src="/javascripts/jquery.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/javascripts/bootstrap.min.js"></script>    
+<% include ../include/include.ejs %> 
+  </head>
+
+
+  <body>
+      <body class="sub sub-03">
+          <div id="wrap">
+            <div id="header">
+            <% include ./nav.ejs %> 
+            </div>
+      <div class="container" style="height:700px;">
+          <br><br>
+            <div class="card card-container" style="margin-top:100px;">
+                <a href="/"> <img id="logo-img" class="logo-img" src="/images/logo.png" /></a>
+                <form class="form-signin" id="login-form">
+                    <input type="text" id="id" class="form-control" placeholder="아이디" required autofocus data-toggle="tooltip" data-placement="bottom" title="아이디">
+                    <input type="password" id="pwd" class="form-control" placeholder="비밀번호" required data-toggle="tooltip" data-placement="bottom" title="비밀번호">
+                    <button id="login-btn" type="submit" class="btn btn-lg btn-primary btn-block btn-signin" 
+                    data-toggle="tooltip" data-placement="bottom" title="로그인">로그인</button>
+                </form><!-- /form -->
+                <br>
+                <div class="login-help" style="text-align:center;">
+                    <!-- <p>비밀번호를 잊으셨나요? <a href="/" data-toggle="tooltip" data-placement="bottom" title="비밀번호 찾기">여기를 클릭하세요</a></p> -->
+                    <p>아직 회원이 아니신가요? <a href="/owner/register" data-toggle="tooltip" data-placement="bottom" title="회원가입">지금 가입하세요</a></p>
+                </div>
+            </div>
+        </div>
+
+</div>
+  </body>
+
+</html>

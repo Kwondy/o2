@@ -6,6 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var flash = require('connect-flash');
+var session = require("express-session");
 var index = require('./routes/index');
 var users = require('./routes/users');
 var sub01 = require('./routes/sub01');
@@ -15,6 +16,7 @@ var sub04 = require('./routes/sub04');
 var sub05 = require('./routes/sub05');
 var sub06 = require('./routes/sub06');
 var admin = require('./routes/admin');
+var owner = require('./routes/owner');
 
 var app = express();
 
@@ -44,6 +46,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(flash()); 
+app.use(session({secret:"o2cv146345fv", resave:true, saveUninitialized:true})); 
 
 
 app.use(flash());
@@ -58,6 +62,7 @@ app.use('/sub04', sub04);
 app.use('/sub05', sub05);
 app.use('/sub06', sub06);
 app.use('/admin', admin);
+app.use('/owner', owner);
 
 
 
